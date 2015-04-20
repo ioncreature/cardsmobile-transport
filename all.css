@@ -1,8 +1,5 @@
 @import 'normalize.css';
 
-
-
-
 html, body, div, section {
     margin: 0;
     padding: 0;
@@ -11,7 +8,7 @@ html, body, div, section {
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -26,8 +23,8 @@ h1, h2, h3 {
 /* HEADER */
 
 header {
-    height: 40px;
-    padding: 12px 0;
+    height: 23px;
+    padding: 20px 0;
     overflow: hidden;
 }
 
@@ -56,4 +53,73 @@ header .links .red.button {
     font-size: 12px;
     line-height: 12px;
     height: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    height: 241px;
+    padding-top: 40px;
+    background: #ECEBE4;
+}
+
+footer table.contacts a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer table.contacts a:hover {
+    text-decoration: underline;
+}
+
+footer table.contacts td {
+    vertical-align: top;
+}
+
+footer table.contacts .img {
+    width: 35px;
+    padding-top: 4px;
+}
+
+footer table.contacts .desc {
+    width: 500px;
+    padding-bottom: 22px;
+}
+
+footer table.contacts .watch-for-us {
+    font-style: italic;
+    color: #7198B8;
+}
+
+footer table.contacts .links ul {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+footer table.contacts .links ul li {
+    float: left;
+    width: 31px;
+    height: 31px;
+    margin-right: 20px;
+}
+
+footer table.contacts .links ul a.social {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+}
+
+footer table.contacts .links ul a.social.vk {
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) center center no-repeat;
+}
+
+footer table.contacts .links ul a.social.fb {
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) left center no-repeat;
+}
+
+footer table.contacts .links ul a.social.tw {
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) right center no-repeat;
 }

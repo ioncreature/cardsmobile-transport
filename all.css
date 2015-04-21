@@ -33,6 +33,56 @@ h3 {
     margin: 0 auto;
 }
 
+
+/* SLIDER */
+
+.nav-button {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-button .icon {
+    position: absolute;
+    top: 58%;
+    margin: 0 9px 0 9px;
+    width: 22px;
+    height: 42px;
+}
+
+.nav-button.prev-button {
+    left: 0;
+}
+
+.nav-button.prev-button .icon {
+    background: transparent url(./img/arrows.png) left bottom no-repeat;
+}
+
+.nav-button.prev-button.light .icon {
+    background-position: left top;
+}
+
+.nav-button.next-button {
+    right: 0;
+}
+
+.nav-button.next-button .icon {
+    background: transparent url(./img/arrows.png) right bottom no-repeat;
+}
+
+.nav-button.next-button.light .icon {
+    background-position: right top;
+}
+
+
 /* HEADER */
 
 header {
@@ -69,7 +119,7 @@ header .links .social {
 }
 
 
-/* PAGE-BREAK */
+/* PAGE BREAK */
 
 .page-break .container {
     overflow: hidden;
@@ -89,9 +139,13 @@ header .links .social {
 /* LINE 1 */
 
 #line-1 {
+    transition: background-color 1.8s ease;
+}
+
+#line-1 .container {
+    position: relative;
     padding-top: 10px;
     height: 544px;
-    transition: background-color 1.8s ease;
 }
 
 #line-1.bus {
@@ -142,6 +196,10 @@ header .links .social {
 /* LINE 3 */
 
 #line-3 {
+}
+
+#line-3 .container {
+    position: relative;
     height: 583px;
     padding: 10px 0;
 }

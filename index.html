@@ -32,13 +32,58 @@
 <body>
 
 <script>
-    function run( elem, classes, delay ){
-        var i = 0;
-        setInterval( function(){
-            elem.removeClass( classes.join(' ') );
-            elem.addClass( classes[i++ % classes.length] );
-        }, delay );
+    function Slider( elem, classes, delay ){
+        this.elem = elem;
+        this.classes = classes;
+        this.delay = delay;
+        this.current = classes.indexOf( elem.attr('class') ) || 0;
     }
+
+    Slider.prototype.next = function(){
+        this.current = this.current >= this.classes.length - 1 ? 0 : this.current + 1;
+        this.goTo( this.classes[this.current] );
+    };
+
+    Slider.prototype.previous = function(){
+        this.current = this.current === 0 ? this.classes.length - 1 : this.current - 1;
+        this.goTo( this.classes[this.current] );
+    };
+
+    Slider.prototype.goTo = function( className ){
+        this.elem.removeClass( this.classes.join(' ') );
+        this.elem.addClass( className );
+        this.run();
+    };
+
+    Slider.prototype.run = function(){
+        var slider = this;
+        clearTimeout( this.timeout );
+        this.timeout = setTimeout( function(){
+            slider.next();
+        }, this.delay );
+    };
+
+    Slider.prototype.addButtons = function( container, className ){
+        var slider = this;
+
+        this.buttonsContainer = container;
+        this.prevButton = this._createButton( 'prev-button ' + (className || '') );
+        this.nextButton = this._createButton( 'next-button ' + (className || '') );
+        this.buttonsContainer.append( this.prevButton, this.nextButton );
+
+        this.prevButton.click( function(){
+            slider.previous();
+        });
+        this.nextButton.click( function(){
+            slider.next();
+        });
+    };
+
+    Slider.prototype._createButton = function( className ){
+        var button = $( '<div class="nav-button"><div class="icon"></div></div>' );
+        button.addClass( className );
+        return button;
+    };
 </script>
 
 <header>
@@ -65,7 +110,9 @@
     </div>
 </div>
 <script>
-    run( $('#line-1'), ['metro', 'tram', 'trolleybus', 'bus'], 6000 );
+    var slider1 = new Slider( $('#line-1'), ['metro', 'tram', 'trolleybus', 'bus'], 6000 );
+    slider1.addButtons( $('#line-1 .container') );
+    slider1.run();
 </script>
 
 
@@ -92,7 +139,8 @@
     </div>
 </div>
 <script>
-    run( $('#line-2'), ['fb', 'chat', 'cat'], 3500 );
+    var slider2 = new Slider( $('#line-2'), ['fb', 'chat', 'cat'], 3500 );
+    slider2.run();
 </script>
 
 
@@ -116,7 +164,9 @@
     </div>
 </div>
 <script>
-    run( $('#line-3'), ['term-2', 'term-3', 'term-1'], 3000 );
+    var slider3 = new Slider( $('#line-3'), ['term-2', 'term-3', 'term-1'], 5000 );
+    slider3.addButtons( $('#line-3 .container'), 'light' );
+    slider3.run();
 </script>
 
 
@@ -143,7 +193,8 @@
     </div>
 </div>
 <script>
-    run( $('#line-4'), ['step-2', 'step-3', 'step-1'], 2000 );
+    var slider4 = new Slider( $('#line-4'), ['step-2', 'step-3', 'step-1'], 800 );
+    slider4.run();
 </script>
 
 
@@ -169,7 +220,8 @@
     </div>
 </div>
 <script>
-    run( $('#line-5'), ['night', 'day'], 8000 );
+    var slider5 = new Slider( $('#line-5'), ['night', 'day'], 7500 );
+    slider5.run();
 </script>
 
 
@@ -227,7 +279,8 @@
     </div>
 </div>
 <script>
-    run( $('#line-6'), ['step-2', 'step-3', 'step-1'], 4500 );
+    var slider6 = new Slider( $('#line-6'), ['step-2', 'step-3', 'step-1'], 4500 );
+    slider6.run();
 </script>
 
 

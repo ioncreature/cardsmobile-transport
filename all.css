@@ -342,7 +342,7 @@ header .links .social {
 footer {
     height: 241px;
     padding-top: 40px;
-    background: #ECEBE4 url(./img/page_contact/cloud.png) center center no-repeat;
+    background: #ECEBE4 url(./img/page_contact/cloud.png) 44% center no-repeat;
 }
 
 footer table.contacts a {

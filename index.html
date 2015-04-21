@@ -31,6 +31,16 @@
 </head>
 <body>
 
+<script>
+    function run( elem, classes, delay ){
+        var i = 0;
+        setInterval( function(){
+            elem.removeClass( classes.join(' ') );
+            elem.addClass( classes[i++ % classes.length] );
+        }, delay );
+    }
+</script>
+
 <header>
     <div class="container">
         <div class="logo">
@@ -44,6 +54,182 @@
         </div>
     </div>
 </header>
+
+
+<div id="line-1" class="bus">
+    <div class="container">
+        <h1>
+            ОПЛАЧИВАЙТЕ ПРОЕЗД В ТРАНСПОРТЕ<br />
+            ПРИКОСНОВЕНИЕМ ТЕЛЕФОНА
+        </h1>
+    </div>
+</div>
+<script>
+    run( $('#line-1'), ['metro', 'tram', 'trolleybus', 'bus'], 6000 );
+</script>
+
+
+<div class="page-break">
+    <div class="container">
+        <a href="http://cardsmobile.ru" class="small logo">
+            <img src="./img/logo_wallet_small_menu.png" width="22" height="23">
+        </a>
+        <a href="http://cardsmobile.ru/download" class="red button">Скачать</a>
+    </div>
+</div>
+
+
+<div id="line-2" class="cat">
+    <div class="container">
+        <h1>
+            ВЫ СКОРЕЕ ЗАБУДЕТЕ ДОМА КОШЕЛЕК <br/>
+            С ПРОЕЗДНЫМ БИЛЕТОМ, ЧЕМ ВАШ СМАРТФОН
+        </h1>
+        <h3>
+            В нем — всё: переписки с друзьями, звонки от близких,<br/>
+            письма и даже картинки с котиками.
+        </h3>
+    </div>
+</div>
+<script>
+    run( $('#line-2'), ['fb', 'chat', 'cat'], 3500 );
+</script>
+
+
+<div class="page-break">
+    <div class="container">
+        <a href="http://cardsmobile.ru" class="small logo">
+            <img src="./img/logo_wallet_small_menu.png" width="22" height="23">
+        </a>
+        <a href="http://cardsmobile.ru/download" class="red button">Скачать</a>
+    </div>
+</div>
+
+
+<div id="line-3" class="term-1">
+    <div class="container">
+        <h1>ВЫПУСТИТЕ В «КОШЕЛЬКЕ» ПРОЕЗДНОЙ</h1>
+        <h3>
+            Для вашего города и оплачивайте проезд в транспорте<br />
+            прикосновением телефона.
+        </h3>
+    </div>
+</div>
+<script>
+    run( $('#line-3'), ['term-2', 'term-3', 'term-1'], 3000 );
+</script>
+
+
+<div class="page-break">
+    <div class="container">
+        <a href="http://cardsmobile.ru" class="small logo">
+            <img src="./img/logo_wallet_small_menu.png" width="22" height="23">
+        </a>
+        <a href="http://cardsmobile.ru/download" class="red button">Скачать</a>
+    </div>
+</div>
+
+
+<div id="line-4" class="step-1">
+    <div class="container">
+        <h1>
+            ПРОЕЗДНОЙ В «КОШЕЛЬКЕ» НЕ ОТЛИЧАЕТСЯ <br />
+            ОТ ВАШЕЙ ПЛАСТИКОВОЙ ИЛИ БУМАЖНОЙ КАРТОЧКИ
+        </h1>
+        <h3>
+            Единственная разница: он выпущен в вашем смартфоне <br />
+            и защищен специальным встроенным чипом.
+        </h3>
+    </div>
+</div>
+<script>
+    run( $('#line-4'), ['step-2', 'step-3', 'step-1'], 2000 );
+</script>
+
+
+<div class="page-break">
+    <div class="container">
+        <a href="http://cardsmobile.ru" class="small logo">
+            <img src="./img/logo_wallet_small_menu.png" width="22" height="23">
+        </a>
+        <a href="http://cardsmobile.ru/download" class="red button">Скачать</a>
+    </div>
+</div>
+
+
+<div id="line-5" class="day">
+    <div class="bg">
+        <div class="container">
+            <h1>
+                ВЫ МОЖЕТЕ ВЫПУСТИТЬ ВАШУ КАРТУ<br />
+                В ЛЮБОЕ ВРЕМЯ И В ЛЮБОМ МЕСТЕ — ТОГДА,<br />
+                КОГДА ЭТО БУДЕТ ДЛЯ ВАС УДОБНО
+            </h1>
+        </div>
+    </div>
+</div>
+<script>
+    run( $('#line-5'), ['night', 'day'], 8000 );
+</script>
+
+
+<div class="page-break">
+    <div class="container">
+        <a href="http://cardsmobile.ru" class="small logo">
+            <img src="./img/logo_wallet_small_menu.png" width="22" height="23">
+        </a>
+        <a href="http://cardsmobile.ru/download" class="red button">Скачать</a>
+    </div>
+</div>
+
+
+<div id="line-6" class="step-1">
+    <div class="container">
+        <h1>
+            ТАКУЮ КАРТУ ВЫ МОЖЕТЕ ПОПОЛНИТЬ БЕЗ<br />
+            ОЧЕРЕДЕЙ МЕНЬШЕ ЧЕМ ЗА МИНУТУ ПРИ ПОМОЩИ<br />
+            ВАШЕГО ТЕЛЕФОНА
+        </h1>
+        <table>
+            <tr class="step-1">
+                <td>
+                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                </td>
+                <td>
+                    <h3>Нажмите кнопку «Пополнить».</h3>
+                </td>
+            </tr>
+
+            <tr class="step-2">
+                <td>
+                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                </td>
+                <td>
+                    <h3>
+                        Выберите банковскую карту<br />
+                        и сумму пополнения.
+                    </h3>
+                </td>
+            </tr>
+
+            <tr class="step-3">
+                <td>
+                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                </td>
+                <td>
+                    <h3>
+                        Готово!<br />
+                        Баланс вашей карты пополнен.
+                    </h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    run( $('#line-6'), ['step-2', 'step-3', 'step-1'], 4500 );
+</script>
+
 
 
 <footer>

@@ -13,6 +13,18 @@ body {
 
 h1, h2, h3 {
     font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.1em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 .container {
@@ -42,25 +54,231 @@ header .links .social {
     margin-right: 10px;
 }
 
-header .links .red.button {
+.red.button {
     float: right;
     margin-left: 16px;
-    padding: 6px 10px 5px 10px;
+    padding: 5px 12px 5px 14px;
     background-color: #EE2D31;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    font-size: 12px;
-    line-height: 12px;
-    height: 12px;
+    font-size: 13px;
+    line-height: 13px;
+    height: 13px;
 }
+
+
+/* PAGE-BREAK */
+
+.page-break .container {
+    overflow: hidden;
+    height: 23px;
+    padding: 8px 0;
+}
+
+.page-break .container .small.logo {
+    float: left;
+}
+
+.page-break .container .red.button {
+    float: right;
+}
+
+
+/* LINE 1 */
+
+#line-1 {
+    padding-top: 10px;
+    height: 544px;
+    transition: background-color 1.8s ease;
+}
+
+#line-1.bus {
+    background: #5CBCEB url(./img/page_1/bus.png) center bottom no-repeat;
+}
+
+#line-1.metro {
+    background: #FCBA4C url(./img/page_1/metro.png) center bottom no-repeat;
+}
+
+#line-1.tram {
+    background: #ACE1FA url(./img/page_1/tram.png) center bottom no-repeat;
+}
+
+#line-1.trolleybus {
+    background: #4E3953 url(./img/page_1/trolleybus.png) center bottom no-repeat;
+}
+
+#line-1 h1 {
+    text-align: center;
+}
+
+
+/* LINE 2 */
+
+#line-2 {
+    height: 583px;
+    padding: 10px 0;
+}
+
+#line-2.cat {
+    background: #81BC5C url(./img/page_2/hand_cat.png) center bottom no-repeat;
+}
+
+#line-2.fb {
+    background: #81BC5C url(./img/page_2/hand_fb.png) center bottom no-repeat;
+}
+
+#line-2.chat {
+    background: #81BC5C url(./img/page_2/hand_wtsp.png) center bottom no-repeat;
+}
+
+#line-2 h3 {
+    color: #44632f;
+}
+
+
+/* LINE 3 */
+
+#line-3 {
+    height: 583px;
+    padding: 10px 0;
+}
+
+#line-3 h3 {
+    color: #FDBB4C;
+}
+
+#line-3.term-1 {
+    background: #4E3953 url(./img/page_3/hand_terminal_1.png) center bottom no-repeat;
+}
+
+#line-3.term-2 {
+    background: #4E3953 url(./img/page_3/hand_terminal_2.png) center bottom no-repeat;
+}
+
+#line-3.term-3 {
+    background: #4E3953 url(./img/page_3/hand_terminal_3.png) center bottom no-repeat;
+}
+
+
+/* LINE 4 */
+
+#line-4 {
+    height: 583px;
+    padding: 10px 0;
+}
+
+#line-4.step-1 {
+    background: #F28669 url(./img/page_4/hand_wallet_1.png) center bottom no-repeat;
+}
+
+#line-4.step-2 {
+    background: #F28669 url(./img/page_4/hand_wallet_2.png) center bottom no-repeat;
+}
+
+#line-4.step-3 {
+    background: #F28669 url(./img/page_4/hand_wallet_3.png) center bottom no-repeat;
+}
+
+#line-4 h3 {
+    color: #4E3953;
+}
+
+
+/* LINE 5 */
+
+#line-5 {
+    transition: background-color 1.8s ease;
+}
+
+#line-5 .bg {
+    height: 583px;
+    padding: 10px 0;
+}
+
+#line-5.day {
+    background: #5CBCEB url(./img/page_5/green_day.png) center bottom repeat-x;
+}
+
+#line-5.day .bg {
+    background: transparent url(./img/page_5/hand_city_1.png) center bottom no-repeat;
+}
+
+#line-5.night {
+    background: #4E3953 url(./img/page_5/green_night.png) center bottom repeat-x;
+}
+
+#line-5.night .bg {
+    background: transparent url(./img/page_5/hand_city_2.png) center bottom no-repeat;
+}
+
+
+/* LINE 6 */
+
+#line-6 {
+    height: 560px;
+    padding: 10px 0;
+}
+
+#line-6.step-1 {
+    background: #FCBA4C url(./img/page_6/hand_1.png) 67% bottom no-repeat;
+}
+
+#line-6.step-1 tr.step-2 h3,
+#line-6.step-1 tr.step-3 h3 {
+    color: #F6D6AA;
+}
+
+#line-6.step-1 tr.step-2 img,
+#line-6.step-1 tr.step-3 img {
+    opacity: 0;
+}
+
+#line-6.step-2 {
+    background: #FCBA4C url(./img/page_6/hand_2.png) 67% bottom no-repeat;
+}
+
+#line-6.step-2 tr.step-3 h3 {
+    color: #F6D6AA;
+}
+
+#line-6.step-2 tr.step-3 img {
+    opacity: 0;
+}
+
+#line-6.step-3 {
+    background: #FCBA4C url(./img/page_6/hand_3.png) 67% bottom no-repeat;
+}
+
+#line-6 table {
+    margin: 45px 0 0 115px;
+}
+
+#line-6 table td {
+    vertical-align: top;
+    padding-bottom: 30px;
+}
+
+#line-6 table td img {
+    margin: 9px 15px 0 0;
+    transition: all 1s ease;
+}
+
+#line-6 table td h3 {
+    margin: 0;
+    text-align: left;
+    color: #4E3953;
+    transition: all 1s ease;
+}
+
 
 /* FOOTER */
 
 footer {
     height: 241px;
     padding-top: 40px;
-    background: #ECEBE4;
+    background: #ECEBE4 url(./img/page_contact/cloud.png) bottom center no-repeat;
 }
 
 footer table.contacts a {

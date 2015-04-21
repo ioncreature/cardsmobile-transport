@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    min-width: 900px;
 }
 
 h1, h2, h3 {
@@ -170,15 +171,15 @@ header .links .social {
 }
 
 #line-4.step-1 {
-    background: #F28669 url(./img/page_4/hand_wallet_1.png) center bottom no-repeat;
+    background: #F28669 url(./img/page_4/hand_wallet_1.png) 55% bottom no-repeat;
 }
 
 #line-4.step-2 {
-    background: #F28669 url(./img/page_4/hand_wallet_2.png) center bottom no-repeat;
+    background: #F28669 url(./img/page_4/hand_wallet_2.png) 55% bottom no-repeat;
 }
 
 #line-4.step-3 {
-    background: #F28669 url(./img/page_4/hand_wallet_3.png) center bottom no-repeat;
+    background: #F28669 url(./img/page_4/hand_wallet_3.png) 55% bottom no-repeat;
 }
 
 #line-4 h3 {
@@ -219,10 +220,15 @@ header .links .social {
 #line-6 {
     height: 560px;
     padding: 10px 0;
+    background-color: #FCBA4C;
 }
 
-#line-6.step-1 {
-    background: #FCBA4C url(./img/page_6/hand_1.png) 67% bottom no-repeat;
+#line-6 .container {
+    height: 560px;
+}
+
+#line-6.step-1 .container {
+    background: #FCBA4C url(./img/page_6/hand_1.png) 600px bottom no-repeat;
 }
 
 #line-6.step-1 tr.step-2 h3,
@@ -235,8 +241,8 @@ header .links .social {
     opacity: 0;
 }
 
-#line-6.step-2 {
-    background: #FCBA4C url(./img/page_6/hand_2.png) 67% bottom no-repeat;
+#line-6.step-2 .container {
+    background: #FCBA4C url(./img/page_6/hand_2.png) 600px bottom no-repeat;
 }
 
 #line-6.step-2 tr.step-3 h3 {
@@ -247,8 +253,8 @@ header .links .social {
     opacity: 0;
 }
 
-#line-6.step-3 {
-    background: #FCBA4C url(./img/page_6/hand_3.png) 67% bottom no-repeat;
+#line-6.step-3 .container {
+    background: #FCBA4C url(./img/page_6/hand_3.png) 600px bottom no-repeat;
 }
 
 #line-6 table {
@@ -278,7 +284,7 @@ header .links .social {
 footer {
     height: 241px;
     padding-top: 40px;
-    background: #ECEBE4 url(./img/page_contact/cloud.png) bottom center no-repeat;
+    background: #ECEBE4 url(./img/page_contact/cloud.png) center center no-repeat;
 }
 
 footer table.contacts a {

@@ -99,8 +99,29 @@ header .links {
 }
 
 header .links .social {
+    display: inline-block;
     margin-right: 10px;
+    height: 23px;
+    width: 23px;
+    background: transparent;
 }
+
+header .links .social:hover {
+    background-position-y: bottom !important;
+}
+
+header .links .social.fb {
+    background: transparent url(./img/logo_fb_vk_tw_menu.png) left top no-repeat;
+}
+
+header .links .social.vk {
+    background: transparent url(./img/logo_fb_vk_tw_menu.png) center top no-repeat;
+}
+
+header .links .social.tw {
+    background: transparent url(./img/logo_fb_vk_tw_menu.png) right top no-repeat;
+}
+
 
 .red.button {
     float: right;
@@ -113,8 +134,12 @@ header .links .social {
     font-size: 13px;
     line-height: 13px;
     height: 13px;
+    transition: background-color 0.3s ease;
 }
 
+.red.button:hover {
+    background-color: #F47933;
+}
 
 /* PAGE BREAK */
 
@@ -129,7 +154,14 @@ header .links .social {
 }
 
 .page-break .container .small.logo {
+    width: 23px;
+    height: 23px;
+    background: transparent url(./img/logo_wallet_small_menu.png) center top no-repeat;
     float: left;
+}
+
+.page-break .container .small.logo:hover {
+    background-position-y: bottom;
 }
 
 .page-break .container .red.button {
@@ -396,13 +428,18 @@ footer table.contacts .links ul a.social {
 }
 
 footer table.contacts .links ul a.social.vk {
-    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) center center no-repeat;
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) center top no-repeat;
 }
 
 footer table.contacts .links ul a.social.fb {
-    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) left center no-repeat;
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) left top no-repeat;
 }
 
 footer table.contacts .links ul a.social.tw {
-    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) right center no-repeat;
+    background: transparent url(./img/page_contact/logo_fb_vk_tw.png) right top no-repeat;
 }
+
+footer table.contacts .links ul a.social:hover {
+    background-position-y: bottom;
+}
+

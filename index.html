@@ -71,11 +71,15 @@
         this.nextButton = this._createButton( 'next-button ' + (className || '') );
         this.buttonsContainer.append( this.prevButton, this.nextButton );
 
-        this.prevButton.click( function(){
+        this.prevButton.click( function( event ){
+            event.stopPropagation();
             slider.previous();
+            return false;
         });
-        this.nextButton.click( function(){
+        this.nextButton.click( function( event ){
+            event.stopPropagation();
             slider.next();
+            return false;
         });
     };
 

@@ -44,10 +44,7 @@ h3 {
     width: 40px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    user-select: none;
 }
 
 .nav-button .icon {
@@ -121,6 +118,10 @@ header .links .social {
 
 /* PAGE BREAK */
 
+.page-break {
+    background: white;
+}
+
 .page-break .container {
     overflow: hidden;
     height: 23px;
@@ -138,9 +139,7 @@ header .links .social {
 
 /* LINE 1 */
 
-#line-1 {
-    transition: background-color 1.8s ease;
-}
+#line-1 {}
 
 #line-1 .container {
     position: relative;
@@ -162,6 +161,10 @@ header .links .social {
 
 #line-1.trolleybus {
     background: #4E3953 url(./img/page_1/trolleybus.png) center bottom no-repeat;
+}
+
+#line-1.trolleybus .nav-button .icon {
+    background-position-y: top;
 }
 
 #line-1 h1 {
@@ -247,9 +250,7 @@ header .links .social {
 
 /* LINE 5 */
 
-#line-5 {
-    transition: background-color 1.8s ease;
-}
+#line-5 {}
 
 #line-5 .bg {
     height: 583px;

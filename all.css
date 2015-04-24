@@ -18,6 +18,7 @@ h1, h2, h3 {
 }
 
 h1 {
+    margin-top: 55px;
     font-size: 2.1em;
     margin-bottom: 15px;
     color: white;
@@ -122,7 +123,6 @@ header .links .social.tw {
     background: transparent url(./img/logo_fb_vk_tw_menu.png) right top no-repeat;
 }
 
-
 .red.button {
     float: right;
     margin-left: 16px;
@@ -181,7 +181,7 @@ header .links .social.tw {
 #line-1 .container {
     position: relative;
     padding-top: 10px;
-    height: 544px;
+    height: 742px;
 }
 
 #line-1.bus {
@@ -212,7 +212,7 @@ header .links .social.tw {
 /* LINE 2 */
 
 #line-2 {
-    height: 583px;
+    height: 760px;
     padding: 10px 0;
 }
 
@@ -240,7 +240,7 @@ header .links .social.tw {
 
 #line-3 .container {
     position: relative;
-    height: 583px;
+    height: 760px;
     padding: 10px 0;
 }
 
@@ -264,7 +264,7 @@ header .links .social.tw {
 /* LINE 4 */
 
 #line-4 {
-    height: 583px;
+    height: 760px;
     padding: 10px 0;
 }
 
@@ -290,7 +290,7 @@ header .links .social.tw {
 #line-5 {}
 
 #line-5 .bg {
-    height: 583px;
+    height: 760px;
     padding: 10px 0;
 }
 
@@ -314,13 +314,13 @@ header .links .social.tw {
 /* LINE 6 */
 
 #line-6 {
-    height: 560px;
+    height: 710px;
     padding: 10px 0;
     background-color: #FCBA4C;
 }
 
 #line-6 .container {
-    height: 560px;
+    height: 710px;
 }
 
 #line-6.step-1 .container {
@@ -354,7 +354,7 @@ header .links .social.tw {
 }
 
 #line-6 table {
-    margin: 45px 0 0 115px;
+    margin: 110px 0 0 125px;
 }
 
 #line-6 table td {
@@ -378,8 +378,8 @@ header .links .social.tw {
 /* FOOTER */
 
 footer {
-    height: 241px;
-    padding-top: 40px;
+    height: 271px;
+    padding-top: 70px;
     background: #ECEBE4 url(./img/page_contact/cloud.png) 44% center no-repeat;
 }
 

@@ -32,6 +32,27 @@
 <body>
 
 <script>
+    var imgs = [
+        './img/page_1/metro.png',
+        './img/page_1/tram.png',
+        './img/page_1/trolleybus.png',
+        './img/page_2/hand_wtsp.png',
+        './img/page_3/hand_terminal_2.png',
+        './img/page_3/hand_terminal_3.png',
+        './img/page_4/hand_wallet_2.png',
+        './img/page_4/hand_wallet_3.png',
+        './img/page_5/hand_city_2.png',
+        './img/page_6/hand_2.png',
+        './img/page_6/hand_3.png',
+        './img/page_5/green_night.png'
+    ].map( function( img ){
+        var i = new Image;
+            i.src = img;
+        return i;
+    });
+</script>
+
+<script>
     function Slider( elem, classes, delay ){
         this.elem = elem;
         this.classes = classes;
@@ -190,7 +211,7 @@
     </div>
 </div>
 <script>
-    var slider5 = new Slider( $('#line-5'), ['night', 'day'], 8500 );
+    var slider5 = new Slider( $('#line-5'), ['night', 'day'], 7500 );
     slider5.run();
 </script>
 

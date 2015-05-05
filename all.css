@@ -181,7 +181,7 @@ header .links .social.tw {
 #line-1 .container {
     position: relative;
     padding-top: 10px;
-    height: 742px;
+    height: 700px;
 }
 
 #line-1.bus {
@@ -212,7 +212,7 @@ header .links .social.tw {
 /* LINE 2 */
 
 #line-2 {
-    height: 760px;
+    height: 710px;
     padding: 10px 0;
 }
 
@@ -240,7 +240,7 @@ header .links .social.tw {
 
 #line-3 .container {
     position: relative;
-    height: 760px;
+    height: 710px;
     padding: 10px 0;
 }
 
@@ -264,7 +264,7 @@ header .links .social.tw {
 /* LINE 4 */
 
 #line-4 {
-    height: 760px;
+    height: 710px;
     padding: 10px 0;
 }
 
@@ -317,16 +317,24 @@ header .links .social.tw {
 /* LINE 6 */
 
 #line-6 {
-    height: 710px;
-    padding: 10px 0;
+    height: 700px;
     background-color: #FCBA4C;
 }
 
 #line-6 .container {
-    height: 710px;
+    position: relative;
+    padding: 10px 0;
+    height: 100%;
 }
 
-#line-6.step-1 .container {
+#line-6 .content {
+    height: 509px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+#line-6.step-1 .content {
     background: #FCBA4C url(./img/page_6/hand_1.png) 600px bottom no-repeat;
 }
 
@@ -340,7 +348,7 @@ header .links .social.tw {
     opacity: 0;
 }
 
-#line-6.step-2 .container {
+#line-6.step-2 .content {
     background: #FCBA4C url(./img/page_6/hand_2.png) 600px bottom no-repeat;
 }
 
@@ -352,7 +360,7 @@ header .links .social.tw {
     opacity: 0;
 }
 
-#line-6.step-3 .container {
+#line-6.step-3 .content {
     background: #FCBA4C url(./img/page_6/hand_3.png) 600px bottom no-repeat;
 }
 

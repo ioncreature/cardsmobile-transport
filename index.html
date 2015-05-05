@@ -223,40 +223,43 @@
             ОЧЕРЕДЕЙ МЕНЬШЕ ЧЕМ ЗА МИНУТУ ПРИ ПОМОЩИ<br />
             ВАШЕГО ТЕЛЕФОНА
         </h1>
-        <table>
-            <tr class="step-1">
-                <td>
-                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
-                </td>
-                <td>
-                    <h3>Нажмите кнопку «Пополнить».</h3>
-                </td>
-            </tr>
 
-            <tr class="step-2">
-                <td>
-                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
-                </td>
-                <td>
-                    <h3>
-                        Выберите банковскую карту<br />
-                        и сумму пополнения.
-                    </h3>
-                </td>
-            </tr>
+        <div class="content">
+            <table>
+                <tr class="step-1">
+                    <td>
+                        <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                    </td>
+                    <td>
+                        <h3>Нажмите кнопку «Пополнить».</h3>
+                    </td>
+                </tr>
 
-            <tr class="step-3">
-                <td>
-                    <img src="./img/page_6/arrow_green.png" height="18" width="25" />
-                </td>
-                <td>
-                    <h3>
-                        Готово!<br />
-                        Баланс вашей карты пополнен.
-                    </h3>
-                </td>
-            </tr>
-        </table>
+                <tr class="step-2">
+                    <td>
+                        <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                    </td>
+                    <td>
+                        <h3>
+                            Выберите банковскую карту<br />
+                            и сумму пополнения.
+                        </h3>
+                    </td>
+                </tr>
+
+                <tr class="step-3">
+                    <td>
+                        <img src="./img/page_6/arrow_green.png" height="18" width="25" />
+                    </td>
+                    <td>
+                        <h3>
+                            Готово!<br />
+                            Баланс вашей карты пополнен.
+                        </h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 <script>
@@ -268,6 +271,7 @@
 
 <footer>
     <div class="container">
+
         <table class="contacts">
             <tr>
                 <td class="img">
@@ -335,7 +339,7 @@
 
 
 <script>
-    var minPageHeight = 815,
+    var minPageHeight = 760,
         pages = [
             {e: $( '#line-1' ), offset: 70},
             {e: $( '#line-2' ), offset: 43},
@@ -343,22 +347,35 @@
             {e: $( '#line-4' ), offset: 40},
             {e: $( '#line-5' ), offset: 37},
             {e: $( '#line-6' ), offset: 43}
-        ];
+        ],
+        timer;
 
-    window.onresize = redrawWindow;
+    $( window ).resize( function(){
+        timer && clearTimeout( timer );
+        timer = setTimeout( function(){
+            redrawWindow();
+        }, 100 );
+    });
     redrawWindow();
 
     function redrawWindow(){
-        clearTimeout( redrawWindow.timer );
-        redrawWindow.timer = setTimeout( function(){
-            var height = $( window ).height();
-            console.log( 'redraw' );
-            if ( height > minPageHeight )
-                pages.forEach( function( page ){
-                    page.e.height( height - page.offset );
-                });
-        }, 300 );
+        var height = $( window ).height();
+        pages.forEach( function( page ){
+            var h = height > minPageHeight ? height : minPageHeight;
+            page.e.height( h - page.offset );
+        });
     }
+</script>
+
+
+<script>
+    $( window ).scroll( function( event ){
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        console.log( 'scroll' );
+        return false;
+    });
 </script>
 
 

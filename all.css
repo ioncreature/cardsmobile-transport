@@ -290,7 +290,10 @@ header .links .social.tw {
 #line-5 {}
 
 #line-5 .bg {
-    height: 760px;
+    height: 100%;
+}
+
+#line-5 .bg .container {
     padding: 10px 0;
 }
 

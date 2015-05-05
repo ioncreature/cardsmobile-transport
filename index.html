@@ -260,7 +260,7 @@
     </div>
 </div>
 <script>
-    var slider6 = new Slider( $('#line-6'), ['step-2', 'step-3', 'step-1'], 4500 );
+    var slider6 = new Slider( $('#line-6'), ['step-2', 'step-3', 'step-1'], 3500 );
     slider6.run();
 </script>
 
@@ -331,6 +331,34 @@
                 $( '#fixed-menu' ).slideDown();
         }
     })
+</script>
+
+
+<script>
+    var minPageHeight = 815,
+        pages = [
+            {e: $( '#line-1' ), offset: 70},
+            {e: $( '#line-2' ), offset: 43},
+            {e: $( '#line-3' ), offset: 37},
+            {e: $( '#line-4' ), offset: 40},
+            {e: $( '#line-5' ), offset: 37},
+            {e: $( '#line-6' ), offset: 43}
+        ];
+
+    window.onresize = redrawWindow;
+    redrawWindow();
+
+    function redrawWindow(){
+        clearTimeout( redrawWindow.timer );
+        redrawWindow.timer = setTimeout( function(){
+            var height = $( window ).height();
+            console.log( 'redraw' );
+            if ( height > minPageHeight )
+                pages.forEach( function( page ){
+                    page.e.height( height - page.offset );
+                });
+        }, 300 );
+    }
 </script>
 
 

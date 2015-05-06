@@ -334,25 +334,86 @@
             else
                 $( '#fixed-menu' ).slideDown();
         }
-    })
+    });
+</script>
+
+
+<script>
+    var pages = [
+            {e: $( '#line-1' ), offset: 70},
+            {e: $( '#line-2' ), offset: 39},
+            {e: $( '#line-3' ), offset: 39},
+            {e: $( '#line-4' ), offset: 39},
+            {e: $( '#line-5' ), offset: 39},
+            {e: $( '#line-6' ), offset: 39}
+        ],
+        scrollTimer,
+        animation;
+
+    $( window ).bind( 'mousewheel DOMMouseScroll', stopAnimation );
+
+    $( window ).scroll( function(){
+        clearTimeout( scrollTimer );
+        scrollTimer = setTimeout( calcOffsets, 800 );
+    });
+
+
+    function calcOffsets(){
+        var windowHeight = $( window ).height(),
+            viewportTop = window.scrollY,
+            viewportBottom = window.scrollY + windowHeight,
+            pagesInView = [];
+
+        pages.forEach( function( page ){
+            page.top = page.e.offset().top;
+            page.height = page.e.height();
+            page.bottom = page.top + page.height;
+            if ( viewportTop <= page.bottom && viewportBottom >= page.top ){
+                pagesInView.push( page );
+                page.joint = Math.min( page.bottom, viewportBottom ) - Math.max( page.top, viewportTop );
+            }
+            else
+                page.joint = 0;
+        });
+
+        if ( pagesInView.length >= 1 ){
+            var maxJoint = 0,
+                maxPage = pagesInView[0];
+
+            pagesInView.forEach( function( page ){
+                if ( page.joint > maxJoint ){
+                    maxJoint = page.joint;
+                    maxPage = page;
+                }
+            });
+
+            if ( !isLastPage() )
+                moveToPage( maxPage.e, maxPage.offset );
+
+            function isLastPage(){
+                return pagesInView.length === 1 && maxPage.e === pages[5].e;
+            }
+        }
+    }
+
+    function moveToPage( page, offset ){
+        var scrollTop = page.offset().top - (offset || 0);
+        $( 'body' ).animate( {scrollTop: scrollTop}, 400 );
+    }
+
+    function stopAnimation(){
+        $( 'body' ).stop();
+    }
 </script>
 
 
 <script>
     var minPageHeight = 760,
-        pages = [
-            {e: $( '#line-1' ), offset: 70},
-            {e: $( '#line-2' ), offset: 43},
-            {e: $( '#line-3' ), offset: 37},
-            {e: $( '#line-4' ), offset: 40},
-            {e: $( '#line-5' ), offset: 37},
-            {e: $( '#line-6' ), offset: 43}
-        ],
-        timer;
+        resizeTimer;
 
     $( window ).resize( function(){
-        timer && clearTimeout( timer );
-        timer = setTimeout( function(){
+        resizeTimer && clearTimeout( resizeTimer );
+        resizeTimer = setTimeout( function(){
             redrawWindow();
         }, 100 );
     });
@@ -365,17 +426,6 @@
             page.e.height( h - page.offset );
         });
     }
-</script>
-
-
-<script>
-    $( window ).scroll( function( event ){
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        console.log( 'scroll' );
-        return false;
-    });
 </script>
 
 

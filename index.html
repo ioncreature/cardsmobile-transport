@@ -360,8 +360,8 @@
 
     function calcOffsets(){
         var windowHeight = $( window ).height(),
-            viewportTop = window.scrollY,
-            viewportBottom = window.scrollY + windowHeight,
+            viewportTop = window.pageYOffset || window.scrollY,
+            viewportBottom = viewportTop + windowHeight,
             pagesInView = [];
 
         pages.forEach( function( page ){
@@ -398,7 +398,7 @@
 
     function moveToPage( page, offset ){
         var scrollTop = page.offset().top - (offset || 0);
-        $( 'body' ).animate( {scrollTop: scrollTop}, 400 );
+        $( 'html, body' ).animate( {scrollTop: scrollTop}, 400 );
     }
 
     function stopAnimation(){

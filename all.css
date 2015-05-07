@@ -50,7 +50,7 @@ h3 {
 
 .nav-button .icon {
     position: absolute;
-    top: 58%;
+    bottom: 300px;
     margin: 0 9px 0 9px;
     width: 22px;
     height: 42px;
@@ -181,7 +181,8 @@ header .links .social.tw {
 #line-1 .container {
     position: relative;
     padding-top: 10px;
-    height: 700px;
+    min-height: 700px;
+    height: 100%;
 }
 
 #line-1.bus {
@@ -240,7 +241,8 @@ header .links .social.tw {
 
 #line-3 .container {
     position: relative;
-    height: 710px;
+    min-height: 710px;
+    height: 100%;
     padding: 10px 0;
 }
 
